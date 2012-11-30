@@ -51,6 +51,14 @@
 		<input type="search" name="term" placeholder="Enter search terms" results="10" value="{{term}}" autosave="search">
 		<button type="submit">search</button>
 	</div>
+
+	<div>
+		<span id="input-filters">
+			{{#eachProperty filters}}
+				<label><input type="checkbox" name="filter" value="{{property}}" {{#if value.enabled}}checked{{/if}}>{{value.name}}</input></label>
+			{{/eachProperty}}
+		</span>
+	</div>
 </script>
 
 <script type="text/html" data-template="Article">

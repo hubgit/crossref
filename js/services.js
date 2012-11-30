@@ -16,18 +16,18 @@ var CrossRef = function(options) {
     this.search = function(input, offset, limit) {
         var parts = [input.term];
 
-        $.each(input.filters, function(index, value) {
-            if (value.enabled) {
-                parts.push(index);
-            }
-        });
-
         var data = {
             q: parts.join(" "),
             sort: "year",
             page: Math.ceil(offset / limit) + 1,
             rows: limit
         };
+
+        $.each(input.filters, function(index, item) {
+            if (item.enabled) {
+                data[index] = item.value;
+            }
+        });
 
         return this.get({ url: this.url, data: data });
     };

@@ -2,18 +2,11 @@ var Models = {
     Query: Backbone.Model.extend({
         defaults: {
             "filters":  {
-                "free full text[filter]": {
+                "oa_status": {
                     name: "free full text",
+                    value: "Open Access",
                     enabled: false
                 },
-                "review[ptyp]": {
-                    name: "review",
-                    enabled: false
-                },
-                "comment[ptyp]": {
-                    name: "comment",
-                    enabled: false
-                }
             },
             "days": 0,
             "term": ""
