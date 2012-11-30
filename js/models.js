@@ -7,6 +7,11 @@ var Models = {
                     value: "Open Access",
                     enabled: false
                 },
+                "sort": {
+                    name: "sort by relevance",
+                    value: "relevance",
+                    enabled: false
+                },
             },
             "days": 0,
             "term": ""
