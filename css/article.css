@@ -1,0 +1,110 @@
+article header {
+    display: -webkit-flex;
+    display: flex;
+}
+
+article [property=name] {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+article [property=url] {
+    color: inherit;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+article [property=url]:visited {
+    color: green;
+}
+
+article [property=datePublished] {
+    display: inline-block;
+    white-space: nowrap;
+    color: #999;
+}
+
+article [property=datePublished] .day {
+    visibility: hidden;
+}
+
+article [property=creators] {
+    color: #777;
+    margin-left: 10px;
+}
+
+article [property=creator] {
+    white-space: nowrap;
+}
+
+article [property=creator] a {
+    color: inherit;
+}
+
+article [property=citation] {
+    color: #270;
+    margin-left: 10px;
+}
+
+article [property=journal]  {
+    color: inherit;
+}
+
+article .has-extra .extra {
+    display: none;
+}
+
+article .has-extra:hover .extra {
+    /*display: inline;*/
+}
+
+article [property=abstract] {
+    font-weight: normal;
+    padding: 0 10px;
+    color: #444;
+    font-size: 90%;
+}
+
+article [property=abstract]:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+article section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+article section,
+article .sources {
+    display: none;
+}
+
+article.expanded section {
+    display: block;
+}
+
+article.expanded .sources {
+    display: inline-block;
+}
+
+article .et-al {
+    font-style: italic;
+    white-space: nowrap;
+    color: #aaa;
+}
+
+article .no-abstract {
+    font-size: 90%;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+}
+
+@media only screen and (min-width: 500px) {
+    article .context {
+        width: 4em;
+    }
+}
+
