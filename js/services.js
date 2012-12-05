@@ -20,7 +20,8 @@ var CrossRef = function(options) {
             q: parts.join(" "),
             sort: "year",
             page: Math.ceil(offset / limit) + 1,
-            rows: limit
+            rows: limit,
+            header: "true"
         };
 
         $.each(input.filters, function(index, item) {

@@ -16,7 +16,12 @@ var Collections = {
 			return app.services.crossref.search(data, view.offset, view.limit).done(options.success);
 		},
 
-		parse: function(items) {
+		parse: function(data) {
+			var items = data.items;
+
+			app.models.options.set("count", data.totalResults);
+			app.models.query.set("count", data.totalResults);
+
 			if (items.length) {
 				app.views.pagination.setNextOffset();
 
